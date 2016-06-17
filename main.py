@@ -10,9 +10,13 @@ class irc():
     authors = None
 
     def __init__(self):
-        with open(self.config, 'r') as f:
-            self.config = json.load(f)
-        self.set_motd()
+        try:
+            with open(self.config, 'r') as f:
+                self.configuro = json.load(f)
+            while(1):
+                print("[+]YES!")
+        except Exception as e:
+            print(e)
 
     def set_motd(self):
         self.versions = self.config["version"]
@@ -37,7 +41,7 @@ class plugin():
 
 def main():
     inst1 = irc()
-    inst1.set_motd()
+    #inst1.set_motd()
 
 
 
