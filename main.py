@@ -1,5 +1,6 @@
 import json
 import os
+import socket
 
 
 class irc():
@@ -8,18 +9,19 @@ class irc():
     motd = None
     version = None
     authors = None
-
+    irc_host = None
+    irc_port = None
+    irc_cmdchannel = None
+    irc_botchannel = None
     def __init__(self):
         try:
             with open(self.config, 'r') as f:
-                self.configuro = json.load(f)
-            while(1):
-                print("[+]YES!")
+                self.config = json.loads(f.read())
         except Exception as e:
             print(e)
 
     def set_motd(self):
-        self.versions = self.config["version"]
+        self.version = self.config["version"]
         self.authors = self.config["author"]
         self.motd = self.config["motd-location"]
         banner_buffer = []
@@ -27,9 +29,16 @@ class irc():
         motd = open(self.motd, 'w')
         for line in banner:
             banner_buffer.append(line)
-        motd.write("".join(banner_buffer))
-        with open(self.motd, 'a'):
-            self.motd.append(" version: %s /n author(s): %s /n" % str(self.version), str(", ".join(self.authors)))
+        motd.write(str("".join(banner_buffer))  + " Version:: %s " %str(self.version)  + "\n" + " Author(s):: %s" %str(", ".join(self.authors)) +  "\n" + (" "+"="*42) + "\n")
+
+    def connect_server(self):
+	pass
+    def join_channel(self):
+	pass
+    def send_command(self):
+	pass
+    def 
+
 
 
 class conn_db():
@@ -41,7 +50,7 @@ class plugin():
 
 def main():
     inst1 = irc()
-    #inst1.set_motd()
+    inst1.set_motd()
 
 
 
