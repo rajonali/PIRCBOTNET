@@ -8,5 +8,6 @@
 "max-conn": 1,
 "min-conn": 1,
 "nickname-prefix": ["minion", "slave", "bot"],
-"motd-location": "/etc/ircd-hybrid/ircd.motd"
+"motd-location": "/etc/ircd-hybrid/ircd.motd",
+"users-db": "helper/users.db"
 }
