@@ -3,11 +3,13 @@
 "version": "0.0.0.0.0.0.0.1",
 "author": ["Tasnim Ali"],
 "host": ["127.0.0.1"],
-"port": [80],
+"port": ["80"],
 "SSL-enabled": "True",
 "max-conn": 1,
 "min-conn": 1,
-"nickname-prefix": ["minion", "slave", "bot"],
+"nickname-prefix": "slave",
+"master-nick": "MASTER-Tanner",
 "motd-location": "/etc/ircd-hybrid/ircd.motd",
-"users-db": "helper/users.db"
+"users-db": "helper/users.db",
+"channel": "#cottonfield"
 }
