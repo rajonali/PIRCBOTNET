@@ -2,14 +2,14 @@
 "name": "PIRC",
 "version": "0.0.0.0.0.0.0.1",
 "author": ["Tasnim Ali"],
-"host": ["127.0.0.1"],
-"port": ["80"],
+"host": "127.0.0.1",
+"port": 6667,
 "SSL-enabled": "True",
 "max-conn": 1,
 "min-conn": 1,
-"nickname-prefix": "slave",
-"master-nick": "MASTER-Tanner",
-"motd-location": "/etc/ircd-hybrid/ircd.motd",
+"nickname-prefix": "minion",
+"master-nick": "MASTER-Gru",
+"motd-location": "C:/Users/ta044/Downloads/python-ircd-master/python-ircd-master/motd.txt",
 "users-db": "helper/users.db",
-"channel": "#cottonfield"
+"channel": "#test"
 }
