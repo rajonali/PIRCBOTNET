@@ -1,2 +1,2 @@
 # PIRCBOTNET
-A python IRC botnet using a raw sockets. 
+A python IRC C&C server using a raw sockets. 
